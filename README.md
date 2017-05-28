@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+멋사세종 미니 프로젝트 학교 미니맵 입니다!
 
 Things you may want to cover:
 
