@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 
   post 'write' => 'home#db_save'      # 등록페이지에서 등록하기 누르고 db에 저장하기
+  
   get '/to_main' => 'home#index'      # DB에 저장하고 메인페이지로 돌아오기
 
   get '/write' => 'home#index'   # 등록페이지에서 메인페이지로 돌아온 후 새로고침 했을 때
