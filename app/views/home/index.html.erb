@@ -20,7 +20,7 @@
       markerArray[numMaker] = new google.maps.LatLng(<%= row.xxx %>,<%= row.yyy %>);
       contentArray[numMaker] = '<div>' +
         			'<h4><%= row.title %></h4>'+
-        			'<a href="/home/info/<%= row.id %>" target="_blank">상세 페이지로</a>'
+        			'<a href="/home/info/<%= row.id %>" target="_blank">상세 페이지</a>'
         			'</div>';
 
       numMaker = numMaker + 1;
@@ -29,6 +29,13 @@
      iConArray[0] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
      iConArray[1] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
      iConArray[2] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
+     iConArray[3] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
+     iConArray[4] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
+     iConArray[5] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
+     iConArray[6] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
+     iConArray[7] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
+     iConArray[8] = "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png";
+     
 
     function initialize() {
     	var mapOptions = {

@@ -9,6 +9,7 @@ class HomeController < ApplicationController
 
   def db_save
     @title = params[:title]
+    @date = params[:date]
     @location = params[:X_Y]
 
     xy_Info = [
@@ -25,7 +26,7 @@ class HomeController < ApplicationController
       [36.609104,127.283782],
       [36.611130,127.284853],
               ]
-    if(@location == "@option1") then
+    if(@location == "option1") then
       @position_x = xy_Info[0][0]
       @position_y = xy_Info[0][0]
     elsif(@location == "option2") then
@@ -66,6 +67,7 @@ class HomeController < ApplicationController
 
     my_db = Post.new
     my_db.title = @title
+    my_db.date = @date
     my_db.xxx = @position_x
     my_db.yyy = @position_y
     my_db.save
@@ -75,6 +77,6 @@ class HomeController < ApplicationController
   end
 
   def info
-    @selected = Post.find(params[:Table_id])
+    @selected = Post.find(params[:Table_id]) 
   end
 end
