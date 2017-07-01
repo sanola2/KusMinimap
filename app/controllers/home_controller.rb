@@ -1,6 +1,12 @@
 class HomeController < ApplicationController
   def index
-    @every_post = Post.all
+    today = Time.new
+    today = today.strftime("%Y-%m-%d")
+    #@every_post = Post.where(:created_at => today..today + 7.day)
+    #@every_post = Post.where(:created_at => (Time.now)..(Time.now.midnight + 7.day))
+    #@every_post = Post.where("date <= date + ?", 7.day)
+    @every_post = Post.where("date(date) <= ? and ? <= date(date, '+7 days')", today, today)
+    #@every_post = Post.where("date(date) <= date('2017-07-02')")
   end
 
   def upload
@@ -77,6 +83,6 @@ class HomeController < ApplicationController
   end
 
   def info
-    @selected = Post.find(params[:Table_id]) 
+    @selected = Post.find(params[:Table_id])
   end
 end

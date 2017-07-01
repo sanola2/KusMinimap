@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170622073901) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
+    t.string "date"
     t.float "xxx"
     t.float "yyy"
     t.datetime "created_at", null: false
