@@ -2,11 +2,10 @@ class HomeController < ApplicationController
   def index
     today = Time.new
     today = today.strftime("%Y-%m-%d")
-    #@every_post = Post.where(:created_at => today..today + 7.day)
-    #@every_post = Post.where(:created_at => (Time.now)..(Time.now.midnight + 7.day))
-    #@every_post = Post.where("date <= date + ?", 7.day)
+
+    # 지금은 입력란의 Date가 하나라서 입력한 날짜에서 7일까지만 마크에 표시하도록 함
+
     @every_post = Post.where("date(date) <= ? and ? <= date(date, '+7 days')", today, today)
-    #@every_post = Post.where("date(date) <= date('2017-07-02')")
   end
 
   def upload
