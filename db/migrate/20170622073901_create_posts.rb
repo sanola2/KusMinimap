@@ -17,6 +17,8 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string "event_date_F"
       # 이미지 경로
       t.string "img"
+      # 행사장소
+      t.string "event_place"
       # 주최기관 변수
       t.string "event_manage"
       # 연락처 변수

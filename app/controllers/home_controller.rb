@@ -42,39 +42,51 @@ class HomeController < ApplicationController
     if(@location == "option1") then
       @position_x = xy_Info[0][0]
       @position_y = xy_Info[0][1]
+      @locationString = "학생회관"
     elsif(@location == "option2") then
       @position_x = xy_Info[1][0]
       @position_y = xy_Info[1][1]
+      @locationString = "호연학사 앞"
     elsif(@location == "option3") then
       @position_x = xy_Info[2][0]
       @position_y = xy_Info[2][1]
+      @locationString = "중앙광장"
     elsif(@location == "option4") then
       @position_x = xy_Info[3][0]
       @position_y = xy_Info[3][1]
+      @locationString = "녹지운동장"
     elsif(@location == "option5") then
       @position_x = xy_Info[4][0]
       @position_y = xy_Info[4][1]
+      @locationString = "석원경상관"
     elsif(@location == "option6") then
       @position_x = xy_Info[5][0]
       @position_y = xy_Info[5][1]
+      @locationString = "제1과기대"
     elsif(@location == "option7") then
       @position_x = xy_Info[6][0]
       @position_y = xy_Info[6][1]
+      @locationString = "제2과기대"
     elsif(@location == "option8") then
       @position_x = xy_Info[7][0]
       @position_y = xy_Info[7][1]
+      @locationString = "농심관"
     elsif(@location == "option9") then
       @position_x = xy_Info[8][0]
       @position_y = xy_Info[8][1]
+      @locationString = "인문관"
     elsif(@location == "option10") then
       @position_x = xy_Info[9][0]
       @position_y = xy_Info[9][1]
+      @locationString = "국제스포츠"
     elsif(@location == "option11") then
       @position_x = xy_Info[10][0]
       @position_y = xy_Info[10][1]
+      @locationString = "중이온가속기"
     elsif(@location == "option12") then
       @position_x = xy_Info[11][0]
       @position_y = xy_Info[11][1]
+      @locationString = "진리관앞"
     end
 
 
@@ -87,6 +99,7 @@ class HomeController < ApplicationController
     my_db.event_time_F = @event_time_F
     my_db.event_date_F = @event_date_F
     my_db.img = @event_img
+    my_db.event_place = @locationString
     my_db.event_manage = @event_manage
     my_db.event_call = @event_call
     my_db.xxx = @position_x

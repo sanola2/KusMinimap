@@ -41,21 +41,21 @@
             </div>
             <div class="col" >
                 <font color="white">
-                    <h4><%= @event_name %></h4>
+                    <h4><%= @selected.title %></h4>
                     <br>
-                      <h5>종류 :<%=@event_type%></h5>
+                      <h5>종류 :<%=@selected.event_type%></h5>
                       <br>
-                      <h5>날짜 , 시간 : <%=@event_date_S%> ~ <%=@event_date_F%>, <%=@event_time_F%></h4>
+                      <h5>날짜 , 시간 : <%=@selected.event_date_S%> ~ <%=@selected.event_date_F%>, <%=@selected.event_time_F%></h4>
                       <br>
-                      <h5>주최 기관 : <%=@event_manage%></h5>
+                      <h5>주최 기관 : <%=@selected.event_manage%></h5>
                       <br>
-                      <h5> 장소 : <%=@event_place%></h5>
+                      <h5>장소 : <%=@selected.event_place%></h5>
                       <br>
-                      <h6>문의 전화는 <%=@event_call%> 로 부탁드립니다.</h6>
+                      <h6>문의 전화는 <%=@selected.event_call%> 로 부탁드립니다.</h6>
                       <br>
                       <h4>상세 내용</h4>
                       <br>
-                      <h5><%=@event_content%></h5>
+                      <h5><%=@selected.event_content%></h5>
                  </font>
             </div>
         </div>

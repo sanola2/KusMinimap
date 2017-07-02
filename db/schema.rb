@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170622073901) do
     t.string "event_time_F"
     t.string "event_date_F"
     t.string "img"
+    t.string "event_place"
     t.string "event_manage"
     t.string "event_call"
     t.float "xxx"
