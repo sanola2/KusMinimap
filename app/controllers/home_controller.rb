@@ -20,6 +20,7 @@ class HomeController < ApplicationController
     @event_date_S = params[:event_date_S]
     @event_time_F = params[:event_time_F]
     @event_date_F = params[:event_date_F]
+    @event_img = params[:event_img]
     @event_manage = params[:event_manage]
     @event_call = params[:event_call]
     @location = params[:X_Y]
@@ -85,6 +86,7 @@ class HomeController < ApplicationController
     my_db.event_date_S = @event_date_S
     my_db.event_time_F = @event_time_F
     my_db.event_date_F = @event_date_F
+    my_db.img = @event_img
     my_db.event_manage = @event_manage
     my_db.event_call = @event_call
     my_db.xxx = @position_x
