@@ -14,7 +14,14 @@ ActiveRecord::Schema.define(version: 20170622073901) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.string "date"
+    t.string "event_type"
+    t.string "event_content"
+    t.string "event_time_S"
+    t.string "event_date_S"
+    t.string "event_time_F"
+    t.string "event_date_F"
+    t.string "event_manage"
+    t.string "event_call"
     t.float "xxx"
     t.float "yyy"
     t.datetime "created_at", null: false

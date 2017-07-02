@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
     # 지금은 입력란의 Date가 하나라서 입력한 날짜에서 7일까지만 마크에 표시하도록 함
 
-    @every_post = Post.where("date(date) <= ? and ? <= date(date, '+7 days')", today, today)
+    @every_post = Post.where("date(event_date_s) <= ? and ? <= date(event_date_f)", today, today)
   end
 
   def upload
@@ -14,7 +14,14 @@ class HomeController < ApplicationController
 
   def db_save
     @title = params[:title]
-    @date = params[:date]
+    @event_type = params[:event_type]
+    @event_content = params[:event_content]
+    @event_time_S = params[:event_time_S]
+    @event_date_S = params[:event_date_S]
+    @event_time_F = params[:event_time_F]
+    @event_date_F = params[:event_date_F]
+    @event_manage = params[:event_manage]
+    @event_call = params[:event_call]
     @location = params[:X_Y]
 
     xy_Info = [
@@ -33,7 +40,7 @@ class HomeController < ApplicationController
               ]
     if(@location == "option1") then
       @position_x = xy_Info[0][0]
-      @position_y = xy_Info[0][0]
+      @position_y = xy_Info[0][1]
     elsif(@location == "option2") then
       @position_x = xy_Info[1][0]
       @position_y = xy_Info[1][1]
@@ -72,7 +79,14 @@ class HomeController < ApplicationController
 
     my_db = Post.new
     my_db.title = @title
-    my_db.date = @date
+    my_db.event_type = @event_type
+    my_db.event_content = @event_content
+    my_db.event_time_S = @event_time_S
+    my_db.event_date_S = @event_date_S
+    my_db.event_time_F = @event_time_F
+    my_db.event_date_F = @event_date_F
+    my_db.event_manage = @event_manage
+    my_db.event_call = @event_call
     my_db.xxx = @position_x
     my_db.yyy = @position_y
     my_db.save

@@ -3,24 +3,43 @@
     <form action="write" method="POST">
       <div class="form-group">
         <label> 행사명</label>
-        <input name ="event_name" type="text" class="form-control" placeholder="행사명을 입력하세요">
+        <input name ="title" type="text" class="form-control" placeholder="행사명을 입력하세요">
       </div>
+      <br>
+
       <div class="form-group">
-        <label> 행사종류</label>
-        <input name ="event_type" type="text" class="form-control" placeholder="행사명을 입력하세요">
+          <label for="exampleSelect1">행사종류</label>
+          <select class="form-control" id="exampleSelect1" name="event_type" type="text">
+            <option>공연</option>
+            <option>강연</option>
+            <option>주점 및 먹거리</option>
+            <option>캠페인</option>
+            <option>이벤트</option>
+          </select>
+        </div>
+        <br>
+
+        <div class="form-group">
+        <label> 행사내용</label>
+        <input name ="event_content" type="text" class="form-control" placeholder="행사내용을 입력하세요.">
       </div>
+      <br>
+
       <div class="form-group">
-        <label> 날짜</label>
-        <input name ="event_date" type="text" class="form-control" placeholder="행사명을 입력하세요">
+        <label> 날짜&행사시간</label>
+        <p>시작</p><input id="someDate" type="date" name="event_date_S">
+        <input id="someDateTime" type="time" placeholder="시작시간을 입력하세요." name="event_time_S">
+        <p>마감</p><input id="someDate" type="date" name="event_date_F">
+        <input id="someDateTime" type="time" placeholder="마감시간을 입력하세요." name="event_time_F">
       </div>
-      <div class="form-group">
-        <label> 행사시간</label>
-        <input name ="date" type="text" class="form-control" placeholder="행사명을 입력하세요">
-      </div>
+      <br>
+
       <div class="form-group">
         <label> 주최기관</label>
-        <input name ="event_manage" type="text" class="form-control" placeholder="행사명을 입력하세요">
+        <input name ="event_manage" type="text" class="form-control" placeholder="주최기관을 입력하세요.">
       </div>
+      <br>
+
       <div class="form-group">
           <label for="exampleSelect1">장소</label>
           <select class="form-control" id="exampleSelect1" name="X_Y">
@@ -38,12 +57,16 @@
             <option value = "option12">진리관앞</option>
           </select>
         </div>
+        <br>
+
       <div class="form-group">
         <label> 문의연락처</label>
-        <input name ="event_call" type="text" class="form-control" placeholder="행사명을 입력하세요">
+        <input name ="event_call" type="text" class="form-control" placeholder="연락처를 입력하세요.">
       </div>
+      <br>
 
-        
+        <button style="margin-top: 20px; float: left" type="reset" class="btn btn-primary">리셋하기</button>
       <button style="margin-top: 20px; float: right" type="submit" class="btn btn-primary">등록하기</button>
     </form>
 </div>
+<br><br><br><br><br><br>
